@@ -1,0 +1,24 @@
+{
+  "register": {
+    "phoneNumber": "9876543210",
+    "userName": "farmer123",
+    "password": "SecurePass123",
+    "fullName": "Radha Kumar",
+    "gender": "Male",
+    "age": 45,
+    "minority": false,
+    "language": "TELUGU",
+    "districtId": 1,
+    "mandalId": 1,
+    "isBpl": false
+  },
+  "login": {
+    "userName": "farmer123",
+    "password": "SecurePass123"
+  },
+  "changePassword": {
+    "userName": "farmer123",
+    "oldPassword": "SecurePass123",
+    "newPassword": "NewSecurePass456"
+  }
+}
