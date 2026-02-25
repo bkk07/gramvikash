@@ -1,0 +1,452 @@
+[
+  {
+    "chunk_id": "wheat_001_leaf_rust",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_wheat.html",
+    "crop": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "disease": "Leaf Rust / Brown Rust",
+    "pathogen": "Puccinia recondita",
+    "symptoms": [
+      "Circular or slightly elliptical pustules on leaves",
+      "Orange to orange-brown urediospores in pustules",
+      "Pustules primarily on upper surfaces of leaves and leaf sheaths",
+      "Occasional infection on neck and awns",
+      "Pustules usually do not coalesce"
+    ],
+    "conditions": {
+      "survival": "Survive on stubbles and volunteer crops",
+      "alternate_host": "Thalictrum sp.",
+      "spread": "Uredospores dispersed from hills"
+    },
+    "management": {
+      "cultural": ["Mixed cropping and crop rotation", "Avoid excess nitrogen", "Use resistant varieties: Lerma Rojo, Safed Lerma, Sonalika, Chotil"],
+      "chemical": ["Sulphur dusting @ 35-40 kg/ha", "Mancozeb @ 2g/litre"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["North India", "Punjab", "Haryana", "Uttar Pradesh"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "wheat_002_stem_rust",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_wheat.html",
+    "crop": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "disease": "Stem Rust / Black Rust",
+    "pathogen": "Puccinia graminis f.sp. tritici",
+    "symptoms": [
+      "Dark reddish-brown pustules on both sides of leaves, stems, and spikes",
+      "Pustules usually separate and scattered, coalescing under heavy infection",
+      "Flecks appear before pustule formation",
+      "Surface tissues appear rough to touch before spore masses break through",
+      "Ragged and torn appearance of tissues as spores break through epidermis"
+    ],
+    "conditions": {
+      "survival": "Survive on stubbles and volunteer crops",
+      "alternate_host": "Berberis spp.",
+      "spread": "Uredospores dispersed from hills"
+    },
+    "management": {
+      "cultural": ["Mixed cropping and crop rotation", "Avoid excess nitrogen", "Use resistant varieties"],
+      "chemical": ["Sulphur dusting @ 35-40 kg/ha", "Mancozeb @ 2g/litre"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["North India", "Punjab", "Haryana"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "wheat_003_stripe_rust",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_wheat.html",
+    "crop": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "disease": "Stripe Rust / Yellow Rust",
+    "pathogen": "Puccinia striiformis",
+    "symptoms": [
+      "Yellow to orange-yellow urediospores in narrow stripes on leaves",
+      "Pustules form narrow stripes along leaf veins",
+      "Can appear on leaf sheaths, necks, and glumes",
+      "Characteristic yellow striping pattern distinguishes from other rusts"
+    ],
+    "conditions": {
+      "survival": "Survive on stubbles and volunteer crops",
+      "alternate_host": "Unknown",
+      "spread": "Uredospores from hills"
+    },
+    "management": {
+      "cultural": ["Mixed cropping and crop rotation", "Avoid excess nitrogen", "Use resistant varieties: Lerma Rojo, Safed Lerma, Sonalika, Chotil"],
+      "chemical": ["Sulphur dusting @ 35-40 kg/ha", "Mancozeb @ 2g/litre"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["North India", "Himalayan foothills"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "wheat_004_loose_smut",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_wheat.html",
+    "crop": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "disease": "Loose Smut",
+    "pathogen": "Ustilago tritici",
+    "symptoms": [
+      "Entire inflorescence replaced by masses of black smut spores except rachis",
+      "Black teliospores blown away by wind leaving bare rachis",
+      "Only remnants of floral structures remain after spore dispersal"
+    ],
+    "conditions": {
+      "spread": "Seed-borne; spores infect flowers during anthesis"
+    },
+    "management": {
+      "chemical": ["Seed treatment with Carboxin 2g/kg (Vitavax 2g/kg)"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["All wheat growing areas of India"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "rice_001_blast",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_1.html",
+    "crop": "Rice / Paddy",
+    "scientific_name": "Oryza sativa",
+    "disease": "Blast",
+    "pathogen": "Magnaporthe oryzae (syn: Pyricularia grisea)",
+    "symptoms": [
+      "Attacks at all growth stages from seedling to ear heading",
+      "Small bluish-green flecks on leaves that enlarge to spindle-shaped spots with grey centre and dark brown margin (Leaf Blast)",
+      "Spots coalesce causing large areas to dry and wither",
+      "Black lesions on nodes causing nodal blast; plant parts above infection die",
+      "Grayish-brown lesions on neck causing panicle to fall over (Neck Blast)",
+      "No grain formed if neck infection occurs before milky stage"
+    ],
+    "conditions": {
+      "weather": "High humidity, cool nights",
+      "season": "Kharif and early Rabi"
+    },
+    "management": {
+      "cultural": ["Use resistant varieties: Penna, Pinakini, Tikkana, Sreeranga, IR-64, Jaya, IR-36, MTU 9992, MTU 1005, MTU 7414", "Burning of straw and stubbles after harvest"],
+      "chemical": ["Tricyclazole 0.6g/litre spray", "Carbendazim 1g/litre", "Edifenphos 1ml/litre"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["Tamil Nadu", "Andhra Pradesh", "Telangana", "West Bengal", "Punjab"],
+    "season": "Kharif"
+  },
+  {
+    "chunk_id": "rice_002_bacterial_leaf_blight",
+    "source": "TNAU Agritech Portal - Crop Protection",
+    "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cpdisblb.html",
+    "crop": "Rice / Paddy",
+    "scientific_name": "Oryza sativa",
+    "disease": "Bacterial Leaf Blight",
+    "pathogen": "Xanthomonas oryzae pv. oryzae",
+    "symptoms": [
+      "Seedling wilt (kresek): 1-3 weeks after transplanting, leaves wilt and turn grayish-green to yellow, entire plant wilts",
+      "Water-soaked to yellowish stripes on leaf blades starting at leaf tips with wavy margin",
+      "Undulated yellowish-white or golden yellow marginal necrosis",
+      "Bacterial ooze (milky/opaque dewdrop) on young lesions early morning",
+      "Severely infected leaves dry quickly",
+      "Yield loss up to 60%"
+    ],
+    "conditions": {
+      "weather": "Warm temperature 25-30°C, high humidity, rain, deep water",
+      "spread": "Irrigation water, rain, trimming tools during transplanting"
+    },
+    "management": {
+      "preventive": ["Seed treatment with bleaching powder (100g/l) and zinc sulphate (2%)", "Seed soaking 8 hours in Agrimycin (0.025%) followed by hot water at 52-54°C for 30 min", "Spray neem oil 3% or NSKE 5%", "Spray fresh cowdung extract (20g cowdung in 1 litre water)"],
+      "cultural": ["Grow tolerant varieties: IR 20, IR 72, PONMANI, TKM 6, Swarna, Ajaya, Deepti, MTU-9992", "Avoid clipping seedlings during transplanting", "Balanced fertilization, avoid excess N", "Maintain proper plant spacing", "Drain field except at flowering"],
+      "chemical": ["Spray Streptomycin sulphate + Tetracycline 300g + Copper oxychloride 1.25kg/ha", "Foliar spray with copper fungicides alternated with Streptocyclin (250 ppm)"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["All rice growing states of India"],
+    "season": "Kharif"
+  },
+  {
+    "chunk_id": "rice_003_brown_spot",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Rice / Paddy",
+    "scientific_name": "Oryza sativa",
+    "disease": "Brown Spot",
+    "pathogen": "Helminthosporium oryzae (Bipolaris oryzae)",
+    "symptoms": [
+      "Occurs in nursery and main crop",
+      "Isolated brown round to oval spots resembling sesame seeds (0.5-2.0mm breadth)",
+      "Spots coalesce to form large patches causing blight of seedlings",
+      "Black or brown spots on glumes covered by olivaceous velvety growth",
+      "Infection on panicle neck with brown color",
+      "50% yield reduction in severe cases"
+    ],
+    "conditions": {
+      "predisposing": "Nutrient deficient soils, high temperature and humidity"
+    },
+    "management": {
+      "cultural": ["Use disease-free seed", "Proper nutrient management"],
+      "chemical": ["Hot water seed treatment at 53-54°C for 10-12 minutes", "Mancozeb 2g/litre spray"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["All rice growing areas", "More severe in Bengal, Odisha, AP"],
+    "season": "Kharif"
+  },
+  {
+    "chunk_id": "rice_004_tungro",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Rice / Paddy",
+    "scientific_name": "Oryza sativa",
+    "disease": "Tungro Disease",
+    "pathogen": "Rice Tungro Virus (RTV) - bacilliform and spherical viruses",
+    "symptoms": [
+      "Stunting and reduced tillering",
+      "Leaves become yellow or orange-yellow, may have rust-colored spots",
+      "Discoloration begins from leaf tip extending down the blade",
+      "Delayed flowering; panicles small and not completely exserted",
+      "Most panicles sterile or with partially filled grains"
+    ],
+    "conditions": {
+      "vector": "Green leafhopper (Nephotettix virescens)",
+      "season": "Any time; epidemics during 1985-87 in Tamil Nadu"
+    },
+    "management": {
+      "cultural": ["Grow tolerant varieties: MTU 9992, MTU 1002, MTU 1003, MTU 1005, Surekha, Vikramarya, Bharani, IR 36", "In epidemic areas follow rotation with pulses or oilseeds"],
+      "chemical": ["Control green leafhopper vector with systemic insecticides"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["Tamil Nadu", "Andhra Pradesh", "Kerala", "Karnataka"],
+    "season": "Kharif"
+  },
+  {
+    "chunk_id": "potato_001_late_blight",
+    "source": "TNAU Agritech Portal - Crop Protection Horticultural Crops",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+    "crop": "Potato",
+    "scientific_name": "Solanum tuberosum",
+    "disease": "Late Blight",
+    "pathogen": "Phytophthora infestans",
+    "symptoms": [
+      "Water-soaked spots on leaves increasing in size turning purple-brown and finally black",
+      "White growth develops on underside of leaves",
+      "Spreads to petioles, rachis and stems; frequently develops at nodes",
+      "Stem breaks at infected nodes and plant topples over",
+      "Purplish-brown spots on tubers spreading to entire surface",
+      "Rusty brown necrosis spreading from surface to center when tuber is cut"
+    ],
+    "conditions": {
+      "weather": "RH > 90%, Temperature 10-25°C, night temperature 10°C",
+      "favoring": "Cloudiness before rainfall, rainfall at least 0.1mm"
+    },
+    "management": {
+      "cultural": ["Resistant varieties: Kufri Naveen, Kufri Jeevan, Kufri Alenkar, Kufri Khasi Garo, Kufri Moti", "Destroy foliage few days before harvest", "Avoid injuries at harvest; do not store visibly infected tubers"],
+      "chemical": ["Protective spraying with Mancozeb or Zineb 0.2% to prevent tuber infection", "Spray every 7-10 days under favorable conditions"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["Himachal Pradesh", "Uttarakhand", "West Bengal", "Bihar", "Uttar Pradesh"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "potato_002_early_blight",
+    "source": "TNAU Agritech Portal - Crop Protection Horticultural Crops",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato.html",
+    "crop": "Potato",
+    "scientific_name": "Solanum tuberosum",
+    "disease": "Early Blight",
+    "pathogen": "Alternaria solani",
+    "symptoms": [
+      "Brown circular spots with concentric rings (target board appearance) on older leaves",
+      "Yellowing around lesions",
+      "Lesions appear first on lower leaves and spread upward",
+      "Severe infection causes premature defoliation"
+    ],
+    "conditions": {
+      "weather": "Warm days with high humidity followed by cool nights",
+      "predisposing": "Nitrogen-deficient soils, stressed plants"
+    },
+    "management": {
+      "cultural": ["Use certified seed tubers", "Proper nitrogen management", "Crop rotation"],
+      "chemical": ["Mancozeb 2g/litre spray every 7-10 days", "Chlorothalonil spray"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["All potato growing areas"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "potato_003_brown_rot",
+    "source": "TNAU Agritech Portal - Crop Protection Horticultural Crops",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato.html",
+    "crop": "Potato",
+    "scientific_name": "Solanum tuberosum",
+    "disease": "Brown Rot / Bacterial Wilt",
+    "pathogen": "Ralstonia solanacearum",
+    "symptoms": [
+      "Sudden wilting of lower leaves that spreads upward",
+      "Internal browning of vascular ring in stem and tuber",
+      "Bacterial ooze from cut stem when placed in water",
+      "Tuber shows brown discoloration in vascular ring and may ooze slime"
+    ],
+    "conditions": {
+      "weather": "High temperature 30-35°C, high soil moisture",
+      "spread": "Soil, water, infected seed tubers"
+    },
+    "management": {
+      "cultural": ["Use certified disease-free seed tubers", "Crop rotation with non-solanaceous crops for 3-4 years", "Remove and destroy infected plants", "Avoid waterlogging"],
+      "chemical": ["No effective chemical control; prevention is key"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["All potato growing areas, especially humid regions"],
+    "season": "Rabi"
+  },
+  {
+    "chunk_id": "sugarcane_001_red_rot",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "disease": "Red Rot",
+    "pathogen": "Colletotrichum falcatum",
+    "symptoms": [
+      "Discolouration of young leaves; margins and tips wither and droop",
+      "Withering continues from tip to leaf base; plant dies within 4-8 days",
+      "Entire stem rots with central tissues becoming pithy",
+      "Reddened tissues throughout basal portion especially vascular bundles",
+      "Characteristic white patches interrupting reddened tissues (diagnostic)",
+      "Shrinkage of internodes; large cavities in center when split open",
+      "Leaves show dark red lesions in mid-rib turning blood-red with dark margins"
+    ],
+    "conditions": {
+      "spread": "Infected setts, water flow from affected fields",
+      "season": "Monsoon period enables faster disease spread"
+    },
+    "management": {
+      "cultural": [
+        "Cultivate only resistant varieties: Co 8021, Co 85019, Co 86010, Co 86032, Co 86249, Co 93009, Co 99004, Co 99006 (Tropical); Bo 91, Co 89003, Co 98015, Co 99015 (Subtropical)",
+        "Phytosanitation and domestic quarantine to prevent movement of setts from endemic areas",
+        "Clear fields of excessive trash and ensure efficient drainage",
+        "Plant only healthy setts",
+        "Isolate affected fields through bunding",
+        "Avoid rattooning of infected fields",
+        "Crop rotation in affected fields"
+      ],
+      "chemical": ["Hot water treatment of setts at 52°C for 30 minutes before planting"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["All sugarcane growing areas of India", "Particularly UP, Maharashtra, Tamil Nadu, AP"],
+    "season": "Year-round crop; disease more severe during monsoon"
+  },
+  {
+    "chunk_id": "sugarcane_002_wilt",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "disease": "Wilt",
+    "pathogen": "Cephalosporium sacchari",
+    "symptoms": [
+      "Symptoms appear only when plant has grown 4-5 months",
+      "Gradual withering of canes",
+      "Pith discolored purple or dirty red with longitudinal streaks",
+      "Leaves gradually turn yellow and dry up",
+      "Characteristic disagreeable odour from diseased canes",
+      "Cottony white mycelium visible in pith region"
+    ],
+    "conditions": {
+      "predisposing": "Alkaline soils increase susceptibility",
+      "history": "First reported 1913; severe damage in Deccan plateau 1965-1967"
+    },
+    "management": {
+      "cultural": [
+        "Select seed setts from disease-free areas",
+        "Avoid alkaline soils for crop growing",
+        "Use resistant varieties: Co-617 and B.P.-17 more resistant in wilt-sick soils"
+      ]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["North India", "Deccan plateau", "Maharashtra", "AP"],
+    "season": "Year-round"
+  },
+  {
+    "chunk_id": "sugarcane_003_smut",
+    "source": "TNAU Agritech Portal - Crop Protection Cash Crops",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cash%20crops_sugarcane.html",
+    "crop": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "disease": "Smut",
+    "pathogen": "Ustilago scitaminea",
+    "symptoms": [
+      "Affected shoots produce a black whip-like structure at the growing point",
+      "Black smut sori emerge from the cane tip in a whip or sickle shape",
+      "Affected plants are stunted with thin canes",
+      "Multiple thin shoots arising from ratoon stumps"
+    ],
+    "conditions": {
+      "spread": "Airborne teliospores, infected setts",
+      "favoring": "Warm dry conditions"
+    },
+    "management": {
+      "cultural": ["Use resistant varieties", "Hot water treatment of setts at 50°C for 2 hours", "Select setts from disease-free fields", "Remove and destroy affected plants immediately"],
+      "chemical": ["Sett treatment with Carbendazim 0.1% solution"]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["All sugarcane growing states"],
+    "season": "Year-round"
+  },
+  {
+    "chunk_id": "sugarcane_004_grassy_shoot",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "disease": "Grassy Shoot Disease",
+    "pathogen": "Phytoplasma",
+    "symptoms": [
+      "Proliferation of vegetative buds from base of cane giving crowded bunch of tillers",
+      "Tillers bear pale yellow to completely chlorotic narrow leaves",
+      "Cane formation rarely takes place; if formed canes are thin with short internodes",
+      "Virus transmitted through infected setts and crop ratooning; aphids are vectors"
+    ],
+    "conditions": {
+      "vector": "Aphids (Rhopalosiphum maidis)",
+      "hosts": "Also infects jowar, Napier grass and Madras grass"
+    },
+    "management": {
+      "cultural": [
+        "Eradication of diseased parts as soon as symptoms noticed",
+        "Avoid selection of setts from diseased area",
+        "Pre-treat healthy setts with hot water at 52°C for 1 hour before planting",
+        "Treat with hot air at 54°C for 8 hours"
+      ],
+      "chemical": ["Spray twice a month with aphidicides to control vector"]
+    },
+    "language_tags": ["en", "hi", "te"],
+    "region": ["All sugarcane growing areas"],
+    "season": "Year-round"
+  },
+  {
+    "chunk_id": "sugarcane_005_ratoon_stunting",
+    "source": "TNAU Agritech Portal - Organic Farming Disease Management",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+    "crop": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "disease": "Ratoon Stunting Disease",
+    "pathogen": "Leifsonia xyli subsp. xyli (bacterium)",
+    "symptoms": [
+      "Affected plants are stunted; most severe in stubble and ratoon crops",
+      "Setts from diseased plants germinate poorly",
+      "Few shoots that emerge grow very slowly",
+      "No visible external symptoms other than stunting and reduced yield"
+    ],
+    "conditions": {
+      "spread": "Mainly through planting material (infected setts) and cutting tools"
+    },
+    "management": {
+      "cultural": [
+        "Select setts from healthy plants",
+        "Hot water treatment of setts at 50°C for 2 hours gives 100% control",
+        "Sterilize cutting tools between plants with disinfectant"
+      ]
+    },
+    "language_tags": ["en", "hi", "te", "ta"],
+    "region": ["All sugarcane growing states"],
+    "season": "Year-round; worse in ratoon crops"
+  }
+]

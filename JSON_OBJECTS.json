@@ -4,13 +4,11 @@
     "userName": "farmer123",
     "password": "SecurePass123",
     "fullName": "Radha Kumar",
-    "gender": "Male",
-    "age": 45,
-    "minority": false,
+    "dob": "1981-05-15",
     "language": "TELUGU",
+    "stateId": 1,
     "districtId": 1,
-    "mandalId": 1,
-    "isBpl": false
+    "mandalId": 1
   },
   "login": {
     "userName": "farmer123",
@@ -20,5 +18,224 @@
     "userName": "farmer123",
     "oldPassword": "SecurePass123",
     "newPassword": "NewSecurePass456"
+  },
+
+  "_comment_schemes": "============ SCHEME APIS ============",
+
+  "createScheme_PM_KISAN": {
+    "_endpoint": "POST /api/schemes/create (Auth Required)",
+    "schemeName": "PM-KISAN Samman Nidhi",
+    "schemeCode": "PM-KISAN-001",
+    "description": "Under this scheme, the central government provides ₹6,000 per year in three equal installments to small and marginal farmer families having combined landholding up to 2 hectares. The amount is directly transferred to the bank accounts of the beneficiaries.",
+    "benefitDetails": "₹6,000 per year in 3 installments of ₹2,000 each, directly transferred to farmer's bank account.",
+    "category": "AGRICULTURE",
+    "state": null,
+    "eligibilityGroups": [
+      {
+        "groupName": "BASIC_REQUIREMENTS",
+        "groupOperator": "AND",
+        "rules": [
+          { "fieldName": "age", "operator": ">=", "value": "18", "fieldType": "NUMBER" },
+          { "fieldName": "landSize", "operator": "<=", "value": "2", "fieldType": "NUMBER" },
+          { "fieldName": "income", "operator": "<=", "value": "150000", "fieldType": "NUMBER" }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "Who is eligible for PM-KISAN?", "answer": "All small and marginal farmer families with combined landholding up to 2 hectares are eligible.", "language": "EN", "displayOrder": 1 },
+      { "question": "How much money will I receive?", "answer": "₹6,000 per year in three installments of ₹2,000 each.", "language": "EN", "displayOrder": 2 },
+      { "question": "PM-KISAN కోసం ఎవరు అర్హులు?", "answer": "2 హెక్టార్ల వరకు భూమి కలిగిన అన్ని చిన్న మరియు సన్నకారు రైతు కుటుంబాలు అర్హులు.", "language": "TE", "displayOrder": 1 },
+      { "question": "PM-KISAN के लिए कौन पात्र है?", "answer": "2 हेक्टेयर तक भूमि वाले सभी छोटे और सीमांत किसान परिवार पात्र हैं।", "language": "HI", "displayOrder": 1 }
+    ]
+  },
+
+  "createScheme_SOIL_HEALTH": {
+    "_endpoint": "POST /api/schemes/create (Auth Required)",
+    "schemeName": "Soil Health Card Scheme",
+    "schemeCode": "SOIL-HEALTH-002",
+    "description": "The Soil Health Card Scheme provides soil health cards to farmers which carry crop-wise recommendations of nutrients and fertilizers required for the individual farms to help farmers improve productivity through judicious use of inputs.",
+    "benefitDetails": "Free soil testing and personalized soil health card with nutrient recommendations for your specific land.",
+    "category": "AGRICULTURE",
+    "state": null,
+    "eligibilityGroups": [
+      {
+        "groupName": "BASIC_REQUIREMENTS",
+        "groupOperator": "AND",
+        "rules": [
+          { "fieldName": "age", "operator": ">=", "value": "18", "fieldType": "NUMBER" },
+          { "fieldName": "landSize", "operator": ">=", "value": "0.5", "fieldType": "NUMBER" }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "What is a Soil Health Card?", "answer": "It is a printed report that a farmer gets for his land which tells him about the nutrient status of the soil and recommendations on dosage of fertilizers.", "language": "EN", "displayOrder": 1 },
+      { "question": "Is there any cost?", "answer": "No, soil testing and the health card are provided free of charge.", "language": "EN", "displayOrder": 2 }
+    ]
+  },
+
+  "createScheme_RYTHU_BANDHU": {
+    "_endpoint": "POST /api/schemes/create (Auth Required)",
+    "schemeName": "Rythu Bandhu (Telangana)",
+    "schemeCode": "RYTHU-BANDHU-003",
+    "description": "Rythu Bandhu is the Telangana state government's investment support scheme for agriculture. It provides financial assistance of ₹10,000 per acre per year to all land-owning farmers for two crop seasons.",
+    "benefitDetails": "₹10,000 per acre per year (₹5,000 per season × 2 seasons) for all land-owning farmers in Telangana.",
+    "category": "AGRICULTURE",
+    "state": "Telangana",
+    "eligibilityGroups": [
+      {
+        "groupName": "BASIC_REQUIREMENTS",
+        "groupOperator": "AND",
+        "rules": [
+          { "fieldName": "state", "operator": "=", "value": "Telangana", "fieldType": "STRING" },
+          { "fieldName": "landSize", "operator": ">=", "value": "1", "fieldType": "NUMBER" },
+          { "fieldName": "age", "operator": ">=", "value": "18", "fieldType": "NUMBER" }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "Who can avail Rythu Bandhu?", "answer": "All land-owning farmers in Telangana state with pattadar passbook are eligible.", "language": "EN", "displayOrder": 1 },
+      { "question": "రైతు బంధు ఎవరు పొందవచ్చు?", "answer": "పట్టాదార్ పాస్ బుక్ కలిగిన తెలంగాణ రాష్ట్రంలోని అన్ని భూ యజమాని రైతులు అర్హులు.", "language": "TE", "displayOrder": 1 }
+    ]
+  },
+
+  "createScheme_CROP_INSURANCE": {
+    "_endpoint": "POST /api/schemes/create (Auth Required)",
+    "schemeName": "Pradhan Mantri Fasal Bima Yojana",
+    "schemeCode": "PMFBY-004",
+    "description": "PMFBY provides crop insurance to farmers at very low premium rates. Kharif crops: 2%, Rabi crops: 1.5%, Commercial and Horticultural: 5% of sum insured.",
+    "benefitDetails": "Crop insurance at subsidized premiums (2% Kharif, 1.5% Rabi) covering natural calamities, pests, and diseases.",
+    "category": "INSURANCE",
+    "state": null,
+    "eligibilityGroups": [
+      {
+        "groupName": "FARMER_REQUIREMENTS",
+        "groupOperator": "AND",
+        "rules": [
+          { "fieldName": "age", "operator": ">=", "value": "18", "fieldType": "NUMBER" },
+          { "fieldName": "landSize", "operator": ">=", "value": "0.5", "fieldType": "NUMBER" }
+        ]
+      },
+      {
+        "groupName": "CROP_REQUIREMENTS",
+        "groupOperator": "OR",
+        "rules": [
+          { "fieldName": "cropType", "operator": "IN", "value": "Paddy,Wheat,Maize,Cotton,Sugarcane,Groundnut,Soybean", "fieldType": "STRING" }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "What crops are covered?", "answer": "All notified crops including food crops (cereals, millets, pulses), oilseeds, and commercial/horticultural crops.", "language": "EN", "displayOrder": 1 },
+      { "question": "What is the premium rate?", "answer": "Kharif: 2%, Rabi: 1.5%, Commercial & Horticultural: 5% of the sum insured.", "language": "EN", "displayOrder": 2 }
+    ]
+  },
+
+  "createScheme_BPL_HOUSING": {
+    "_endpoint": "POST /api/schemes/create (Auth Required)",
+    "schemeName": "Pradhan Mantri Awas Yojana - Gramin",
+    "schemeCode": "PMAY-G-005",
+    "description": "PMAY-G provides financial assistance for construction of pucca houses to eligible rural families who are houseless or living in kutcha/dilapidated houses.",
+    "benefitDetails": "₹1.20 lakh in plain areas and ₹1.30 lakh in hilly/difficult areas for house construction, plus ₹12,000 for toilet under SBM.",
+    "category": "HOUSING",
+    "state": null,
+    "eligibilityGroups": [
+      {
+        "groupName": "BASIC_REQUIREMENTS",
+        "groupOperator": "AND",
+        "rules": [
+          { "fieldName": "age", "operator": ">=", "value": "18", "fieldType": "NUMBER" },
+          { "fieldName": "isBpl", "operator": "=", "value": "true", "fieldType": "BOOLEAN" },
+          { "fieldName": "income", "operator": "<=", "value": "200000", "fieldType": "NUMBER" }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "Who is eligible for PMAY-G?", "answer": "Rural BPL families who are houseless or living in kutcha/dilapidated houses.", "language": "EN", "displayOrder": 1 },
+      { "question": "How much assistance is provided?", "answer": "₹1.20 lakh in plains and ₹1.30 lakh in hilly areas.", "language": "EN", "displayOrder": 2 }
+    ]
+  },
+
+  "_comment_user_fields": "============ SAVE USER KNOWN FIELDS ============",
+
+  "saveUserKnownFields": {
+    "_endpoint": "POST /api/schemes/user-fields (Auth Required)",
+    "farmerId": 1,
+    "fields": [
+      { "fieldName": "landSize", "value": "1.5", "fieldType": "NUMBER" },
+      { "fieldName": "income", "value": "120000", "fieldType": "NUMBER" },
+      { "fieldName": "cropType", "value": "Paddy", "fieldType": "STRING" }
+    ]
+  },
+
+  "_comment_eligibility": "============ ELIGIBILITY CHECK ============",
+
+  "checkEligibility_DISCOVER": {
+    "_endpoint": "POST /api/schemes/check-eligibility (Auth Required)",
+    "_description": "Discover mode: skip rules for missing fields, show potential matches",
+    "farmerId": 1,
+    "mode": "DISCOVER",
+    "additionalFields": {
+      "landSize": "1.5",
+      "income": "120000"
+    }
+  },
+
+  "checkEligibility_VERIFY": {
+    "_endpoint": "POST /api/schemes/check-eligibility (Auth Required)",
+    "_description": "Verify mode: evaluate every rule strictly, confirm eligibility",
+    "farmerId": 1,
+    "mode": "VERIFY",
+    "additionalFields": {
+      "landSize": "1.5",
+      "income": "120000",
+      "cropType": "Paddy"
+    }
+  },
+
+  "checkEligibility_ALMOST_ELIGIBLE_TEST": {
+    "_endpoint": "POST /api/schemes/check-eligibility (Auth Required)",
+    "_description": "This farmer has income 160000 which exceeds PM-KISAN's 150000 limit — should appear as 'almost eligible' for PM-KISAN",
+    "farmerId": 1,
+    "mode": "VERIFY",
+    "additionalFields": {
+      "landSize": "1.5",
+      "income": "160000",
+      "cropType": "Paddy"
+    }
+  },
+
+  "_comment_browse": "============ BROWSE & DETAIL (GET requests) ============",
+
+  "browseSchemes_all": {
+    "_endpoint": "GET /api/schemes/browse",
+    "_description": "No filters — returns all active schemes as cards"
+  },
+  "browseSchemes_central": {
+    "_endpoint": "GET /api/schemes/browse?state=CENTRAL",
+    "_description": "Filter by Central government schemes only"
+  },
+  "browseSchemes_telangana": {
+    "_endpoint": "GET /api/schemes/browse?state=Telangana",
+    "_description": "Filter by Telangana state schemes"
+  },
+  "browseSchemes_agriculture": {
+    "_endpoint": "GET /api/schemes/browse?category=AGRICULTURE",
+    "_description": "Filter by Agriculture category"
+  },
+  "browseSchemes_insurance": {
+    "_endpoint": "GET /api/schemes/browse?category=INSURANCE&state=CENTRAL",
+    "_description": "Central Insurance schemes"
+  },
+
+  "schemeDetail_english": {
+    "_endpoint": "GET /api/schemes/1?language=EN",
+    "_description": "Full detail of scheme ID 1 with English FAQs"
+  },
+  "schemeDetail_telugu": {
+    "_endpoint": "GET /api/schemes/1?language=TE",
+    "_description": "Full detail of scheme ID 1 with Telugu FAQs"
+  },
+  "schemeDetail_hindi": {
+    "_endpoint": "GET /api/schemes/1?language=HI",
+    "_description": "Full detail of scheme ID 1 with Hindi FAQs"
   }
 }

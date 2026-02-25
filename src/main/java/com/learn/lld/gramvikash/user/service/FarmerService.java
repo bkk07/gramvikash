@@ -5,11 +5,15 @@ import com.learn.lld.gramvikash.user.dto.*;
 import com.learn.lld.gramvikash.user.entity.District;
 import com.learn.lld.gramvikash.user.entity.Farmer;
 import com.learn.lld.gramvikash.user.entity.Mandal;
+import com.learn.lld.gramvikash.user.entity.State;
 import com.learn.lld.gramvikash.user.repository.FarmerRepository;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.time.Period;
 
 @Service
 public class FarmerService {
@@ -43,11 +47,15 @@ public class FarmerService {
         farmer.setUserName(request.getUserName());
         farmer.setPassword(passwordEncoder.encode(request.getPassword()));
         farmer.setFullName(request.getFullName());
-        farmer.setGender(request.getGender());
-        farmer.setAge(request.getAge());
-        farmer.setMinority(request.getMinority() != null ? request.getMinority() : false);
+        farmer.setDob(request.getDob());
         farmer.setLanguage(request.getLanguage());
-        farmer.setIsBpl(request.getIsBpl() != null ? request.getIsBpl() : false);
+
+        // Fetch and set state
+        State state = entityManager.find(State.class, request.getStateId());
+        if (state == null) {
+            throw new RuntimeException("State not found");
+        }
+        farmer.setState(state);
 
         // Fetch and set district and mandal
         District district = entityManager.find(District.class, request.getDistrictId());
@@ -118,20 +126,23 @@ public class FarmerService {
         Farmer farmer = farmerRepository.findByUserName(userName)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
+        Integer age = farmer.getDob() != null
+                ? Period.between(farmer.getDob(), LocalDate.now()).getYears()
+                : null;
+
         return FarmerProfileResponse.builder()
                 .id(farmer.getId())
                 .phoneNumber(farmer.getPhoneNumber())
                 .userName(farmer.getUserName())
                 .fullName(farmer.getFullName())
-                .gender(farmer.getGender())
-                .age(farmer.getAge())
-                .minority(farmer.getMinority())
+                .dob(farmer.getDob())
+                .age(age)
                 .language(farmer.getLanguage())
+                .stateName(farmer.getState().getName())
                 .districtName(farmer.getDistrict().getName())
                 .mandalName(farmer.getMandal().getName())
                 .latitude(farmer.getLatitude())
                 .longitude(farmer.getLongitude())
-                .isBpl(farmer.getIsBpl())
                 .isActive(farmer.getIsActive())
                 .build();
     }

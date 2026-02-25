@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,11 +15,9 @@ public class RegisterRequest {
     private String userName;
     private String password;
     private String fullName;
-    private String gender;
-    private Integer age;
-    private Boolean minority;
+    private LocalDate dob;
     private Language language;
+    private Long stateId;
     private Long districtId;
     private Long mandalId;
-    private Boolean isBpl;
 }

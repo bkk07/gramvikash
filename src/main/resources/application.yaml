@@ -18,3 +18,19 @@ spring:
 jwt:
   secret: your-super-secret-key-that-is-very-long-and-secure-please-change-this-in-production-environment
   expiration: 86400000
+
+# ── Python FastAPI service (RAG + ML) ────────────────────────────────────────
+python:
+  service:
+    url: http://localhost:8000
+
+# ── Twilio IVRS ──────────────────────────────────────────────────────────────
+twilio:
+  account-sid: ${TWILIO_ACCOUNT_SID:your_twilio_account_sid}
+  auth-token: ${TWILIO_AUTH_TOKEN:your_twilio_auth_token}
+  phone-number: ${TWILIO_PHONE_NUMBER:+1234567890}
+
+# ── Multipart file upload (for crop images) ──────────────────────────────────
+spring.servlet.multipart:
+  max-file-size: 10MB
+  max-request-size: 10MB

@@ -7,7 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -34,16 +37,16 @@ public class Farmer {
     @Column(nullable = false)
     private Role role = Role.USER;
 
-
     private String fullName;
-
-    private String gender;
-    private Integer age;
-    private Boolean minority = false;
+    private LocalDate dob;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Language language;
+
+    @ManyToOne
+    @JoinColumn(name = "state_id", nullable = false)
+    private State state;
 
     @ManyToOne
     @JoinColumn(name = "district_id", nullable = false)
@@ -55,11 +58,7 @@ public class Farmer {
 
     private Double latitude;
     private Double longitude;
-
-    private Boolean isBpl = false;
     private Boolean isActive = true;
-
-
 
     @ManyToMany
     @JoinTable(
@@ -68,4 +67,7 @@ public class Farmer {
             inverseJoinColumns = @JoinColumn(name = "crop_id")
     )
     private Set<Crop> crops = new HashSet<>();
+
+    @OneToMany(mappedBy = "farmer", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserKnownField> knownFields = new ArrayList<>();
 }
