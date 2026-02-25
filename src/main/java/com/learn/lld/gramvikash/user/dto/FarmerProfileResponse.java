@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,14 +17,13 @@ public class FarmerProfileResponse {
     private String phoneNumber;
     private String userName;
     private String fullName;
-    private String gender;
+    private LocalDate dob;
     private Integer age;
-    private Boolean minority;
     private Language language;
+    private String stateName;
     private String districtName;
     private String mandalName;
     private Double latitude;
     private Double longitude;
-    private Boolean isBpl;
     private Boolean isActive;
 }

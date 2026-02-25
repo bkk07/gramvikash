@@ -39,6 +39,9 @@ public class SecurityConfiguration {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/farmers/register", "/api/farmers/login", "/api/farmers/validate-token").permitAll()
+                .requestMatchers("/api/schemes/browse", "/api/schemes/{schemeId}").permitAll()
+                .requestMatchers("/api/ivrs/**").permitAll()          // Twilio webhooks (no JWT)
+                .requestMatchers("/api/diagnostic/web").permitAll()   // public diagnosis
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
