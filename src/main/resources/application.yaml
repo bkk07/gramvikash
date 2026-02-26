@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/gram_vikash?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: Kiran@210800
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

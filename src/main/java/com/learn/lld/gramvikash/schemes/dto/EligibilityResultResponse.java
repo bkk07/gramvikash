@@ -17,7 +17,6 @@ public class EligibilityResultResponse {
     private List<MatchedScheme> eligibleSchemes;
     private List<MatchedScheme> almostEligibleSchemes;
     private List<MatchedScheme> ineligibleSchemes;
-
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
