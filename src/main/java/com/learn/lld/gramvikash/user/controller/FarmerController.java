@@ -102,4 +102,50 @@ public class FarmerController {
             );
         }
     }
+
+    /**
+     * Update a farmer's GPS location.
+     * Called after registration to set or refresh coordinates for cluster alert notifications.
+     * PUT /api/farmers/{id}/location  body: { "latitude": 18.5204, "longitude": 73.8567 }
+     */
+    @PutMapping("/{id}/location")
+    public ResponseEntity<ApiResponse> updateLocation(
+            @PathVariable Long id,
+            @RequestBody UpdateLocationRequest request) {
+        try {
+            farmerService.updateLocation(id, request.getLatitude(), request.getLongitude());
+            return new ResponseEntity<>(
+                    new ApiResponse(HttpStatus.OK.value(), "Location updated successfully", null),
+                    HttpStatus.OK
+            );
+        } catch (Exception e) {
+            return new ResponseEntity<>(
+                    new ApiResponse(HttpStatus.BAD_REQUEST.value(), "Location update failed", e.getMessage()),
+                    HttpStatus.BAD_REQUEST
+            );
+        }
+    }
+
+    /**
+     * Return nearby active farmers for given coordinates.
+     * GET /api/farmers/nearby?latitude=..&longitude=..&radiusKm=..
+     */
+    @GetMapping("/nearby")
+    public ResponseEntity<ApiResponse> getNearbyFarmers(
+            @RequestParam double latitude,
+            @RequestParam double longitude,
+            @RequestParam(defaultValue = "5.0") double radiusKm) {
+        try {
+            java.util.List<FarmerProfileResponse> list = farmerService.findNearbyFarmers(latitude, longitude, radiusKm);
+            return new ResponseEntity<>(
+                    new ApiResponse(HttpStatus.OK.value(), "Nearby farmers retrieved", list),
+                    HttpStatus.OK
+            );
+        } catch (Exception e) {
+            return new ResponseEntity<>(
+                    new ApiResponse(HttpStatus.BAD_REQUEST.value(), "Failed to retrieve nearby farmers", e.getMessage()),
+                    HttpStatus.BAD_REQUEST
+            );
+        }
+    }
 }

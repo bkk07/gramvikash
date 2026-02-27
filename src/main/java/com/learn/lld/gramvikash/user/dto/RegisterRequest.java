@@ -20,4 +20,6 @@ public class RegisterRequest {
     private Long stateId;
     private Long districtId;
     private Long mandalId;
+    private Double latitude;   // farmer's GPS location for cluster alerts
+    private Double longitude;
 }

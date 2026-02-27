@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class FarmerService {
@@ -69,10 +71,16 @@ public class FarmerService {
             throw new RuntimeException("Mandal not found");
         }
         farmer.setMandal(mandal);
+        farmer.setLatitude(request.getLatitude());
+        farmer.setLongitude(request.getLongitude());
 
         // Save farmer
         Farmer savedFarmer = farmerRepository.save(farmer);
 
+        // Log stored coordinates for debugging
+        org.slf4j.LoggerFactory.getLogger(FarmerService.class)
+            .info("[FarmerService] Saved farmer id={} latitude={} longitude={}",
+                savedFarmer.getId(), savedFarmer.getLatitude(), savedFarmer.getLongitude());
         return new RegisterResponse(
                 savedFarmer.getId(),
                 savedFarmer.getUserName(),
@@ -145,5 +153,34 @@ public class FarmerService {
                 .longitude(farmer.getLongitude())
                 .isActive(farmer.getIsActive())
                 .build();
+    }
+
+            public List<com.learn.lld.gramvikash.user.dto.FarmerProfileResponse> findNearbyFarmers(double latitude, double longitude, double radiusKm) {
+            return farmerRepository.findNearbyActiveFarmers(latitude, longitude, radiusKm)
+                .stream()
+                .map(farmer -> com.learn.lld.gramvikash.user.dto.FarmerProfileResponse.builder()
+                    .id(farmer.getId())
+                    .phoneNumber(farmer.getPhoneNumber())
+                    .userName(farmer.getUserName())
+                    .fullName(farmer.getFullName())
+                    .dob(farmer.getDob())
+                    .age(farmer.getDob() != null ? Period.between(farmer.getDob(), LocalDate.now()).getYears() : null)
+                    .language(farmer.getLanguage())
+                    .stateName(farmer.getState() != null ? farmer.getState().getName() : null)
+                    .districtName(farmer.getDistrict() != null ? farmer.getDistrict().getName() : null)
+                    .mandalName(farmer.getMandal() != null ? farmer.getMandal().getName() : null)
+                    .latitude(farmer.getLatitude())
+                    .longitude(farmer.getLongitude())
+                    .isActive(farmer.getIsActive())
+                    .build())
+                .collect(Collectors.toList());
+            }
+
+    public void updateLocation(Long farmerId, Double latitude, Double longitude) {
+        Farmer farmer = farmerRepository.findById(farmerId)
+                .orElseThrow(() -> new RuntimeException("Farmer not found with id: " + farmerId));
+        farmer.setLatitude(latitude);
+        farmer.setLongitude(longitude);
+        farmerRepository.save(farmer);
     }
 }
